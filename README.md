@@ -1,6 +1,6 @@
 # Poll UI
 
-This UI allow users to vote their opinion regarding on a question.
+This UI allow users to vote their opinion regarding on a question. :rocket:
 
 #### What's been done:
 1. Chart to track user's response and updates dynamically.
