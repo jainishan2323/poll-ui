@@ -33,6 +33,7 @@ npm start
 1. Built on `React` with `Typescript`.
 2. [styled-components](https://www.styled-components.com/) used for styling.
 3. Webpack v4 used for build process.
+4. [react-chartjs-2](https://www.npmjs.com/package/react-chartjs-2) library for Charts.
 
 ## Demo -Desktop
 ![demo-poll-ui](https://user-images.githubusercontent.com/19609136/54083010-145d3280-4344-11e9-8b90-3518efc077d1.gif)
