@@ -34,5 +34,9 @@ npm start
 2. [styled-components](https://www.styled-components.com/) used for styling.
 3. Webpack v4 used for build process.
 
+## Demo
+![demo-poll-ui](https://user-images.githubusercontent.com/19609136/54083010-145d3280-4344-11e9-8b90-3518efc077d1.gif)
+
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
