@@ -35,7 +35,7 @@ export default class App extends React.PureComponent<IAppProps, IAppState> {
         }
     }
 
-    public onPollUpdate = (pollId, label) => {
+    public onPollUpdate = (pollId: number, label: string) => {
         this.setState((prevState) => ({
             pollValues: {
                 ...prevState.pollValues,

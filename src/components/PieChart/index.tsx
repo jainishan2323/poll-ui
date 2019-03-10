@@ -9,7 +9,7 @@ import {
 
 interface IPieChartProps {
     data: any;
-    onPollUpdate: any;
+    onPollUpdate: (pollId: number, label: string) => {};
     type: string;
     pollId: number;
 }
