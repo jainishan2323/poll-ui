@@ -3,12 +3,16 @@
 This UI allow users to vote their opinion regarding on a question. :rocket:
 
 #### What's been done:
-1. Chart to track user's response and updates dynamically.
-2. Single Poll can currently me interacted multiple times, i.e User can vote his multiple times for a single question. Ideally this should be restricted via a backend.
+1. Doughnut Chart to track user's response and updates dynamically.
+2. Each Poll can currently be interacted multiple times. i.e user can cast his vote multiple times for a single question. Ideally this should be restricted via a backend.
 3. Tracks total number of votes on a Poll. Each poll starts with default votes which is equivalent to the number of options. i.e can be either `2` or `6`.
 4. User can switch between multiple poll questions.
-5. The interacted poll state is saved.
+5. The interacted poll state is saved - UI maintains state of vote casted on each poll.
 6. Tested in `Chrome` browser only for now.
+
+#### Pending:
+1. `data.json` is currently converted into `data.ts`. No node server to fetch an api.
+2. User data is purged on page refresh/ tab close. DB to store user data not integrated.
 
 ## Installation
 
