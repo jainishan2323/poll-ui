@@ -1,7 +1,7 @@
 import Styled from 'styled-components';
 
 export const AppWrapper = Styled.section`
-    width: 860px;
+    width: 80%;
     margin: 0 auto;
 `;
 
