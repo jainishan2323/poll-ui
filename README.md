@@ -1,4 +1,4 @@
-# Poll UI
+# Poll UI :thumbsup:   :thumbsdown:
 
 This UI allow users to vote their opinion regarding on a question. :rocket:
 
