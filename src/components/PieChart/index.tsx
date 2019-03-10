@@ -14,16 +14,8 @@ interface IPieChartProps {
     pollId: number;
 }
 
-// const data = {
-//     datasets: [{
-//         data: [20, 80],
-        
-//     }],
-//     labels: ['No', 'Yes'],
-// }
-
 const singlePollColors = ['#ff6d00', '#1565c0'];
-const multiPollColors = [];
+const multiPollColors = ['#ff6d00', '#1565c0', '#c2185b', '#d500f9', '#1de9b6', '#fdd835'];
 
 
 export default class PieChart extends React.Component<IPieChartProps> {
@@ -36,7 +28,7 @@ export default class PieChart extends React.Component<IPieChartProps> {
 
         const labels = Object.keys(data);
         const chartData = labels.map((label: string) => data[label]);
-        const backgroundColor = type === 'single' ? singlePollColors : [];
+        const backgroundColor = type === 'single' ? singlePollColors : multiPollColors;
 
         return {
             datasets: [
@@ -56,9 +48,10 @@ export default class PieChart extends React.Component<IPieChartProps> {
         return (
             <>
                 {
-                    labels.map((label) => (
+                    labels.map((label, index) => (
                         <PollButton
                             key={label}
+                            color={multiPollColors[index]}
                             onClick={() => this.props.onPollUpdate(pollId, label)}
                         >
                             {label}
@@ -72,7 +65,7 @@ export default class PieChart extends React.Component<IPieChartProps> {
     public render() {
         const data = this.getChartConfig();
         return (
-            <div>
+            <ChartContainer>
                 <div>
                     {
                         this.renderPollButtons(data.labels)
@@ -81,7 +74,7 @@ export default class PieChart extends React.Component<IPieChartProps> {
                 <ChartWrapper>
                     <Doughnut data={data} />
                 </ChartWrapper>
-            </div>
+            </ChartContainer>
         )
     }
 }

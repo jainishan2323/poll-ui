@@ -1,35 +1,41 @@
 import React from 'react';
 
 import PieChart from '../PieChart';
+import { getDateString } from '../../utils/getDateString';
 
+import {
+    IPollProps,
+} from '../types'
 import {
     Wrapper,
 } from './styles';
-
-interface IPollProps {
-    chartData: any;
-    onPollUpdate: any;
-    selectedPollId: number;
-}
+import {
+    StyledDateContainer,
+} from '../styles';
 
 export default class Poll extends React.PureComponent<IPollProps> {
     public render() {
+        const {
+            polldata,
+            chartData,
+        } = this.props;
+        const totalVotes = Object.keys(chartData).reduce((acc, option) => acc + chartData[option], 0)
         return (
             <Wrapper>
                 <div>
                     <h3>
-                        Is bitcoin worth the time and money that mining requires?
-                        <span>
-                            17 Jan 2018
-                        </span>
+                        {polldata.title}
+                        <StyledDateContainer>
+                            {getDateString(polldata.publishedDate)}
+                        </StyledDateContainer>
                     </h3>
                     <PieChart
                         data={this.props.chartData}
                         onPollUpdate={this.props.onPollUpdate}
-                        type='single'
+                        type={polldata.answer.type}
                         pollId={this.props.selectedPollId}
                     />
-                    <p>Total number of votes recorded: 182</p>
+                    <p>Total number of votes recorded: <b>{totalVotes}</b></p>
                 </div>
             </Wrapper>
         )

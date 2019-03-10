@@ -1,7 +1,7 @@
 import Styled from 'styled-components';
 
 export const ChartWrapper = Styled.div`
-    width: 300px;
+    width: 500px;
 `;
 
 export const PollButton = Styled.button`
