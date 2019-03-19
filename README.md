@@ -1,6 +1,6 @@
 # Poll UI :thumbsup:   :thumbsdown:
 
-This UI allow users to vote their opinion regarding on a question. :rocket:
+This UI allow users to vote their opinion on a question. :rocket:
 
 #### What's been done:
 1. Doughnut Chart to track user's response and updates dynamically.
